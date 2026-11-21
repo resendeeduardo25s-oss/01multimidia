@@ -289,7 +289,7 @@ private fun MetricCard(title: String, value: String, unit: String, icon: android
 }
 
 @Composable
-private fun SmallAction(label: String, icon: androidx.compose.ui.graphics.vector.ImageVector, accent: Color, onClick: () -> Unit) {
+private fun RowScope.SmallAction(label: String, icon: androidx.compose.ui.graphics.vector.ImageVector, accent: Color, onClick: () -> Unit) {
     Column(Modifier.weight(1f).clip(RoundedCornerShape(13.dp)).background(Color.White.copy(.07f))
         .clickable { onClick() }.padding(vertical = 12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Icon(icon, null, tint = accent); Spacer(Modifier.height(4.dp))
